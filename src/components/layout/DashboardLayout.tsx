@@ -1,33 +1,59 @@
 'use client';
 
 import { ReactNode } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Wallet, CalendarCheck, BookOpen, LogOut, Settings, Bus } from 'lucide-react';
+import Link from 'next/link';
+import { LayoutDashboard, Wallet, CalendarCheck, BookOpen, LogOut, Settings, Bus, Store, Users, FileText } from 'lucide-react';
+
+type Role = 'STUDENT' | 'ADMIN' | 'TEACHER' | 'PARTNER' | 'PARENT' | 'STAFF';
 
 interface SidebarProps {
-  role: 'STUDENT' | 'ADMIN';
+  role: Role;
 }
 
 export function Sidebar({ role }: SidebarProps) {
   const pathname = usePathname();
 
-  const studentLinks = [
-    { href: '/student/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-    { href: '/student/wallet', icon: Wallet, label: 'My Wallet' },
-    { href: '/student/attendance', icon: CalendarCheck, label: 'Attendance' },
-    { href: '/student/e-learning', icon: BookOpen, label: 'E-Learning' },
-    { href: '/student/logistics', icon: Bus, label: 'Bus Tracking' }, // Changed Icon
-  ];
+  const roleLinks = {
+    STUDENT: [
+      { href: '/student/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+      { href: '/student/wallet', icon: Wallet, label: 'My Wallet' },
+      { href: '/student/attendance', icon: CalendarCheck, label: 'Attendance' },
+      { href: '/student/e-learning', icon: BookOpen, label: 'E-Learning' },
+      { href: '/student/logistics', icon: Bus, label: 'Bus Tracking' },
+    ],
+    ADMIN: [
+      { href: '/admin/dashboard', icon: LayoutDashboard, label: 'Overview' },
+      { href: '/admin/users', icon: Settings, label: 'User Management' },
+      { href: '/admin/finances', icon: Wallet, label: 'Finances' },
+      { href: '/admin/attendance', icon: CalendarCheck, label: 'Attendance Logs' },
+    ],
+    TEACHER: [
+      { href: '/teacher/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+      { href: '/teacher/classes', icon: Users, label: 'My Classes' },
+      { href: '/teacher/e-learning', icon: BookOpen, label: 'Upload Materials' },
+      { href: '/teacher/grades', icon: FileText, label: 'Grades (CBT)' },
+    ],
+    PARTNER: [
+      { href: '/partner/dashboard', icon: LayoutDashboard, label: 'POS & Dashboard' },
+      { href: '/partner/inventory', icon: Store, label: 'Inventory' },
+      { href: '/partner/transactions', icon: Wallet, label: 'Sales History' },
+    ],
+    PARENT: [
+      { href: '/parent/dashboard', icon: LayoutDashboard, label: 'Child Overview' },
+      { href: '/parent/wallet', icon: Wallet, label: 'SekolahPay Topup' },
+      { href: '/parent/attendance', icon: CalendarCheck, label: 'Attendance Logs' },
+      { href: '/parent/logistics', icon: Bus, label: 'Live Bus Tracking' },
+    ],
+    STAFF: [
+      { href: '/staff/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+      { href: '/staff/wallet', icon: Wallet, label: 'My Wallet' },
+      { href: '/staff/attendance', icon: CalendarCheck, label: 'Attendance' },
+      { href: '/staff/operations', icon: Settings, label: 'Operations' },
+    ]
+  };
 
-  const adminLinks = [
-    { href: '/admin/dashboard', icon: LayoutDashboard, label: 'Overview' },
-    { href: '/admin/users', icon: Settings, label: 'User Management' },
-    { href: '/admin/finances', icon: Wallet, label: 'Finances' },
-    { href: '/admin/attendance', icon: CalendarCheck, label: 'Attendance Logs' },
-  ];
-
-  const links = role === 'ADMIN' ? adminLinks : studentLinks;
+  const links = roleLinks[role] || roleLinks.STUDENT;
 
   return (
     <aside className="w-64 bg-gray-900 border-r border-gray-800 hidden md:flex flex-col">
@@ -69,7 +95,7 @@ export function Sidebar({ role }: SidebarProps) {
 
 interface DashboardLayoutProps {
   children: ReactNode;
-  role: 'STUDENT' | 'ADMIN';
+  role: Role;
   userName?: string;
   subdomain?: string;
 }
