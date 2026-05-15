@@ -3,6 +3,7 @@
 ## Current Status: 🏗️ Phase 0 (Initialization)
 
 ### Completed Tasks ✅
+- [x] Initialized Git Repository and Branching Strategy
 - [x] Initialized `ROADMAP.md`
 - [x] Initialized `PROGRESS.md`
 - [x] Scaffolded Next.js Project
@@ -15,6 +16,7 @@
 - [x] Implemented Attendance Queue Consumer (Worker)
 - [x] Implemented Attendance API Route (Push to Queue)
 - [x] Registration Flow (NPSN-based API & UI)
+- [x] Owner Dashboard UI (Global Tenant Management)
 - [x] Multi-tenant Auth logic (Subdomain-based login API & UI)
 - [x] FinTech API integration with Durable Objects (`/api/wallet/transaction` & `/api/wallet/balance`)
 - [x] Student Dashboard UI (Wallet view, QR code generation, mock transactions)

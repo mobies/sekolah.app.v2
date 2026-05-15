@@ -1,7 +1,7 @@
 # 🗺️ ROADMAP: SekolahApp V2 (Edge-Powered School Super-App)
 
 ## Phase 0: Project Management & Initialization 🏗️
-- [ ] Initialize Git Repository and Branching Strategy
+- [x] Initialize Git Repository and Branching Strategy
 - [x] Create `ROADMAP.md` and `PROGRESS.md`
 - [ ] Setup Sentry for Edge Logging
 
@@ -16,6 +16,7 @@
 
 ## Phase 3: Core Logic Development 🧠
 - [x] Registration Flow (NPSN-based)
+- [x] Owner Dashboard (Tenant Management)
 - [x] Multi-tenant Auth (Subdomain-based)
 - [x] FinTech Module (Wallet with Durable Objects)
 - [x] Smart Attendance (Queued processing)
