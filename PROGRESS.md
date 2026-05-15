@@ -27,6 +27,7 @@
 - [x] IoT Integration Bridge (HMAC Authenticated Endpoint)
 - [x] Phase 5: External Integration (CBT Bridge with HMAC)
 - [x] Phase 6: UI/UX Polishing & Security Hardening (SweetAlert2, Dark Theme, Build Verification)
+- [x] Extended Role Dashboards (Teacher, Partner, Parent, Staff)
 
 ### In Progress ⏳
 - 🎉 All architectural phases complete. Ready for deployment testing.
