@@ -19,6 +19,8 @@
 - [x] Owner Dashboard (Tenant Management)
 - [x] Multi-tenant Auth (Subdomain-based)
 - [x] FinTech Module (Wallet with Durable Objects)
+- [x] Advanced Finance (Savings, SPP Billing, Finance Role)
+- [x] Marketplace Integration (Pre-orders, Wallet payments)
 - [x] Smart Attendance (Queued processing)
 - [x] E-Learning (R2 Integration)
 

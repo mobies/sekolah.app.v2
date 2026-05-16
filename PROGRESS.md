@@ -19,6 +19,8 @@
 - [x] Owner Dashboard UI (Global Tenant Management)
 - [x] Multi-tenant Auth logic (Subdomain-based login API & UI)
 - [x] FinTech API integration with Durable Objects (`/api/wallet/transaction` & `/api/wallet/balance`)
+- [x] Advanced Finance & Savings (DB Schema, Finance Role Dashboard)
+- [x] Marketplace Pre-Orders (DB Schema, Unified Student/Parent UI)
 - [x] Student Dashboard UI (Wallet view, QR code generation, mock transactions)
 - [x] Admin Dashboard UI (Statistics overview, live attendance stream)
 - [x] Smart Attendance Dashboard Integration (SSE Stream API)
