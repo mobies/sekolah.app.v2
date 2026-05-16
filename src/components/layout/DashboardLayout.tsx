@@ -3,9 +3,9 @@
 import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { LayoutDashboard, Wallet, CalendarCheck, BookOpen, LogOut, Settings, Bus, Store, Users, FileText } from 'lucide-react';
+import { LayoutDashboard, Wallet, CalendarCheck, BookOpen, LogOut, Settings, Bus, Store, Users, FileText, PiggyBank, Receipt, ShoppingBag } from 'lucide-react';
 
-type Role = 'STUDENT' | 'ADMIN' | 'TEACHER' | 'PARTNER' | 'PARENT' | 'STAFF';
+type Role = 'STUDENT' | 'ADMIN' | 'TEACHER' | 'PARTNER' | 'PARENT' | 'STAFF' | 'FINANCE';
 
 interface SidebarProps {
   role: Role;
@@ -17,7 +17,10 @@ export function Sidebar({ role }: SidebarProps) {
   const roleLinks = {
     STUDENT: [
       { href: '/student/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-      { href: '/student/wallet', icon: Wallet, label: 'My Wallet' },
+      { href: '/student/wallet', icon: Wallet, label: 'SekolahPay (Jajan)' },
+      { href: '/student/savings', icon: PiggyBank, label: 'My Savings' },
+      { href: '/student/bills', icon: Receipt, label: 'School Bills' },
+      { href: '/student/market', icon: ShoppingBag, label: 'Marketplace' },
       { href: '/student/attendance', icon: CalendarCheck, label: 'Attendance' },
       { href: '/student/e-learning', icon: BookOpen, label: 'E-Learning' },
       { href: '/student/logistics', icon: Bus, label: 'Bus Tracking' },
@@ -38,10 +41,14 @@ export function Sidebar({ role }: SidebarProps) {
       { href: '/partner/dashboard', icon: LayoutDashboard, label: 'POS & Dashboard' },
       { href: '/partner/inventory', icon: Store, label: 'Inventory' },
       { href: '/partner/transactions', icon: Wallet, label: 'Sales History' },
+      { href: '/partner/orders', icon: ShoppingBag, label: 'Pre-Orders' },
     ],
     PARENT: [
       { href: '/parent/dashboard', icon: LayoutDashboard, label: 'Child Overview' },
-      { href: '/parent/wallet', icon: Wallet, label: 'SekolahPay Topup' },
+      { href: '/parent/wallet', icon: Wallet, label: 'SekolahPay (Topup)' },
+      { href: '/parent/savings', icon: PiggyBank, label: 'Child Savings' },
+      { href: '/parent/bills', icon: Receipt, label: 'Pay Bills (SPP)' },
+      { href: '/parent/market', icon: ShoppingBag, label: 'Order Food/Items' },
       { href: '/parent/attendance', icon: CalendarCheck, label: 'Attendance Logs' },
       { href: '/parent/logistics', icon: Bus, label: 'Live Bus Tracking' },
     ],
@@ -50,6 +57,12 @@ export function Sidebar({ role }: SidebarProps) {
       { href: '/staff/wallet', icon: Wallet, label: 'My Wallet' },
       { href: '/staff/attendance', icon: CalendarCheck, label: 'Attendance' },
       { href: '/staff/operations', icon: Settings, label: 'Operations' },
+    ],
+    FINANCE: [
+      { href: '/finance/dashboard', icon: LayoutDashboard, label: 'Financial Overview' },
+      { href: '/finance/billing', icon: Receipt, label: 'Billing & SPP' },
+      { href: '/finance/savings', icon: PiggyBank, label: 'Manage Savings' },
+      { href: '/finance/reports', icon: FileText, label: 'Transactions Report' },
     ]
   };
 
