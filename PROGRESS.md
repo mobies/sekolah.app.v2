@@ -1,11 +1,9 @@
-# 📈 PROGRESS: SekolahApp V2
+# 📈 PROGRESS: SekolahApp V6
 
-## Current Status: 🏗️ Phase 0 (Initialization)
+## Current Status: 🏗️ Transitioning to Phase 7 (Hybrid BYOC)
 
-### Completed Tasks ✅
+### Completed Tasks (MVP V5) ✅
 - [x] Initialized Git Repository and Branching Strategy
-- [x] Initialized `ROADMAP.md`
-- [x] Initialized `PROGRESS.md`
 - [x] Scaffolded Next.js Project
 - [x] Configured `wrangler.toml` (Durable Objects, Queues, R2)
 - [x] Installed core dependencies (Drizzle, LibSQL, SweetAlert2, etc.)
@@ -13,23 +11,22 @@
 - [x] Implemented Dynamic Database Routing utility
 - [x] Implemented Subdomain Detection Middleware
 - [x] Created Wallet Durable Object class
-- [x] Implemented Attendance Queue Consumer (Worker)
-- [x] Implemented Attendance API Route (Push to Queue)
+- [x] Implemented Attendance Queue Consumer (Worker) & API
 - [x] Registration Flow (NPSN-based API & UI)
 - [x] Owner Dashboard UI (Global Tenant Management)
 - [x] Multi-tenant Auth logic (Subdomain-based login API & UI)
 - [x] FinTech API integration with Durable Objects (`/api/wallet/transaction` & `/api/wallet/balance`)
 - [x] Advanced Finance & Savings (DB Schema, Finance Role Dashboard)
 - [x] Marketplace Pre-Orders (DB Schema, Unified Student/Parent UI)
-- [x] Student Dashboard UI (Wallet view, QR code generation, mock transactions)
-- [x] Admin Dashboard UI (Statistics overview, live attendance stream)
+- [x] Extended Role Dashboards (Admin, Teacher, Partner, Parent, Student, Staff, Finance)
 - [x] Smart Attendance Dashboard Integration (SSE Stream API)
-- [x] E-Learning Module (R2 Integration APIs & Student UI)
-- [x] School Logistics (Cloudflare Worker WebSockets & Student UI)
+- [x] E-Learning Module (R2 Integration APIs)
+- [x] School Logistics (Cloudflare Worker WebSockets)
 - [x] IoT Integration Bridge (HMAC Authenticated Endpoint)
 - [x] Phase 5: External Integration (CBT Bridge with HMAC)
-- [x] Phase 6: UI/UX Polishing & Security Hardening (SweetAlert2, Dark Theme, Build Verification)
-- [x] Extended Role Dashboards (Teacher, Partner, Parent, Staff)
+- [x] Phase 6: UI/UX Polishing (SweetAlert2, Dark Theme)
+- [x] **Upgraded Architecture Blueprint to V6 (Hybrid BYOC)**
 
-### In Progress ⏳
-- 🎉 All architectural phases complete. Ready for deployment testing.
+### In Progress ⏳ (V6 Upgrades)
+- [ ] Phase 7: Tenant Resource Abstraction (DB, Storage, Queue Adapters)
+- [ ] Updating Global `schools` Schema for BYOC Credentials.
