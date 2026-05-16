@@ -14,8 +14,9 @@ To ensure project stability across any AI model (even lower-tier models), you MU
 ### **Project Scope**
 Build a multi-tenant SaaS for schools where each school has its own database and dedicated edge resources.
 - **Target per School:** ~600 Students, 50 Staff/Teachers, + Parents & Partners.
-- **Core Modules:** Admin Dashboard, Smart Attendance, E-Learning, FinTech (Canteen/Koperasi/Marketplace with Wallet), and School Logistics (Bus Tracking).
+- **Core Modules:** Owner (Application Owner) Dashboard, Admin (Schools/tenant) Dashboard, Users (Finance, teacher, staff, student, parent, partner) Dashboard, Owner Landing Page (for owner marketing), School site (for school interactive website), Smart Attendance, Offline student study/learning activity Manajemen/handle, Online Learning Manajemen (E-Learning), student Saving & Payment management system, Learning progress Reporting, student guidance and counseling system, recording of student violations, School Assets(Room and other) & personeel Management, FinTech (Canteen/Koperasi/Marketplace with Wallet), system integration with suppliers, and School Logistics (Bus Tracking).
 - **CBT Status:** Developed separately but must be 100% integrable via API/Webhooks.
+- **Whatsapp Notification Status:** Developed separately but must be 100% integrable via API/Webhooks.
 
 ---
 
